@@ -1,5 +1,5 @@
 function MenuItem() {
-    return React.createElement('li', null, 'Menu Item');
+    return <li>Menu Item</li>
 }
 
 module.exports = MenuItem

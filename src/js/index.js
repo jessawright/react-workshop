@@ -1,9 +1,11 @@
 let MenuItem = require('./menu-item');
 
 ReactDOM.render(
-    React.createElement('ul', null,
-        React.createElement(MenuItem),
-        React.createElement(MenuItem)
-    ),
+  (
+    <ul>
+      <MenuItem />
+      <MenuItem />
+    </ul>
+  ),
     document.getElementById('app')
 );
