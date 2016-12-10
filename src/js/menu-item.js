@@ -2,7 +2,8 @@ let MenuItem = React.createClass({
 
   getDefaultProps: function() {
     return {
-      isActive: false
+      isActive: false,
+      name: 'Default Menu Item'
     }
   },
   getInitialState: function() {
@@ -37,7 +38,7 @@ let MenuItem = React.createClass({
         onMouseEnter={this.handleOnMouseEnter}
         onMouseLeave={this.handleOnMouseLeave}
         onClick={this.handleOnClick}>
-        Menu Item
+        {this.props.name}
           {this.state.subMenuVisible ? (
             <ul>
               <li>Submenu</li>
