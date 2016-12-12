@@ -9,6 +9,10 @@ let SelectableGroup = React.createClass({
     }
   },
 
+  let newChildren = React.Children.map(this.props.children, function(child, index) {
+    return React.cloneElement(child, { isActive: true })
+  }),
+
   render: function() {
     let activeMenu = this.state.activeMenu;
 /*
@@ -22,11 +26,10 @@ let SelectableGroup = React.createClass({
 */
     return (
       <ul>
-        {this.props.children}
+        {this.props.newChildren}
         </ul>
     )
   }
 })
 
 module.exports = SelectableGroup
- 
