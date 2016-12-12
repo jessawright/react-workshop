@@ -8,9 +8,14 @@ let items = [
   'Contact'
 ];
 
+let menuItems = items.map(function(item, index){
+  return <MenuItem key={index} name={item} />
+});
+
+
 ReactDOM.render(
   (
-  <SelectableGroup items={items} activeMenu={1}/>
+  <SelectableGroup children={menuItems} activeMenu={1}/>
   ),
     document.getElementById('app')
 );

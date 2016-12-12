@@ -11,6 +11,7 @@ let SelectableGroup = React.createClass({
 
   render: function() {
     let activeMenu = this.state.activeMenu;
+/*
     let menuItems = this.props.items.map(function(item, index) {
       if (activeMenu === index) {
         return <MenuItem key={index} name={item} isActive={true} />
@@ -18,13 +19,14 @@ let SelectableGroup = React.createClass({
       return <MenuItem key={index} name={item} />
     }
     });
-
+*/
     return (
       <ul>
-        {menuItems}
+        {this.props.children}
         </ul>
     )
   }
 })
 
 module.exports = SelectableGroup
+ 
