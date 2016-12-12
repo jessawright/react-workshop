@@ -1,10 +1,16 @@
-let Menu = require('./menu');
+let SelectableGroup = require('./selectable-group');
 let MenuItem = require('./menu-item');
 
+let items = [
+  'Home',
+  'Search',
+  'About',
+  'Contact'
+];
 
 ReactDOM.render(
   (
-  <Menu />
+  <SelectableGroup items={items} activeMenu={1}/>
   ),
     document.getElementById('app')
 );

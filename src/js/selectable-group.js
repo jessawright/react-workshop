@@ -1,22 +1,17 @@
 let MenuItem = require('./menu-item');
 
-let items = [
-  'Home',
-  'Search',
-  'About',
-  'Contact'
-];
 
-let Menu = React.createClass({
+
+let SelectableGroup = React.createClass({
   getInitialState: function () {
     return {
-      activeMenu: 1
+      activeMenu: this.props.activeMenu
     }
   },
-  
+
   render: function() {
     let activeMenu = this.state.activeMenu;
-    let menuItems = items.map(function(item, index) {
+    let menuItems = this.props.items.map(function(item, index) {
       if (activeMenu === index) {
         return <MenuItem key={index} name={item} isActive={true} />
       } else {
@@ -32,4 +27,4 @@ let Menu = React.createClass({
   }
 })
 
-module.exports = Menu
+module.exports = SelectableGroup
